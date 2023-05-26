@@ -11,17 +11,49 @@
     <!-- JS -->
     <script src="js/script.js"></script>
 
+    <!-- ICON -->
+    <link rel="icon" href="/images/caua.png">
+
     <title>JOGO DA VELHA</title>
 </head>
 <body>
-    
+
     <main>
+
         <section>
-            <h1>Jogo da Velha</h1>
+            <h1>JOGO DA VELHA</h1>
         </section>
+
+        <section class="tabuleiro">
+            <div>
+                <input type="button" value=" " id="btn1"  onclick="clickBtn1()">
+                <input type="button" value=" " id="btn2"  onclick="clickBtn2()">
+                <input type="button" value=" " id="btn3"  onclick="clickBtn3()">
+            </div>
+            <div>
+                <input type="button" value=" " id="btn4"  onclick="clickBtn4()">
+                <input type="button" value=" " id="btn5"  onclick="clickBtn5()">
+                <input type="button" value=" " id="btn6"  onclick="clickBtn6()">
+            </div>
+            <div>
+                <input type="button" value=" " id="btn7"  onclick="clickBtn7()">
+                <input type="button" value=" " id="btn8"  onclick="clickBtn8()">
+                <input type="button" value=" " id="btn9"  onclick="clickBtn9()">
+            </div>
+        </section>
+
+                <br>
+        <section>
+
+            <h2>
+                <span id="lblJogador"> Jogador X </span>
+                <span id="lblJogadas"> (1ª jogador) </span>
+            </h2>
+        </section>
+
         <section></section>
-        <section></section>
-        <section></section>
+
     </main>
+
 </body>
 </html>
