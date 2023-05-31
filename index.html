@@ -12,48 +12,61 @@
     <script src="js/script.js"></script>
 
     <!-- ICON -->
-    <link rel="icon" href="/images/caua.png">
+    <link rel="icon" href="images/bola.png">
 
-    <title>JOGO DA VELHA</title>
+    <title>JOGO DA VELHA - DBZ</title>
 </head>
 <body>
+
 
     <main>
 
         <section>
-            <h1>JOGO DA VELHA</h1>
+            <h1>JOGO DA VELHA DBZ</h1>
         </section>
 
         <section class="tabuleiro">
-            <div>
-                <input type="button" value=" " id="btn1"  onclick="clickBtn1()">
-                <input type="button" value=" " id="btn2"  onclick="clickBtn2()">
-                <input type="button" value=" " id="btn3"  onclick="clickBtn3()">
+            <div class="linha">
+                <div id="btn1"  onclick="clickBtn1()"></div>
+                <div id="btn2"  onclick="clickBtn2()"></div>
+                <div id="btn3"  onclick="clickBtn3()"></div>
             </div>
-            <div>
-                <input type="button" value=" " id="btn4"  onclick="clickBtn4()">
-                <input type="button" value=" " id="btn5"  onclick="clickBtn5()">
-                <input type="button" value=" " id="btn6"  onclick="clickBtn6()">
+            <div class="linha"> 
+                <div id="btn4"  onclick="clickBtn4()"></div>
+                <div id="btn5"  onclick="clickBtn5()"></div>
+                <div id="btn6"  onclick="clickBtn6()"></div>
             </div>
-            <div>
-                <input type="button" value=" " id="btn7"  onclick="clickBtn7()">
-                <input type="button" value=" " id="btn8"  onclick="clickBtn8()">
-                <input type="button" value=" " id="btn9"  onclick="clickBtn9()">
+            <div class="linha">
+                <div id="btn7"  onclick="clickBtn7()"></div>
+                <div id="btn8"  onclick="clickBtn8()"></div>
+                <div id="btn9"  onclick="clickBtn9()"></div>
             </div>
         </section>
+        
 
                 <br>
+                <br>
+
+
         <section>
 
             <h2>
-                <span id="lblJogador"> Jogador X </span>
-                <span id="lblJogadas"> (1ª jogador) </span>
+                <span id="lblJogador"> Jogador Goku Black </span>
+                <span id="lblJogadas"> (1ª Jogada) </span>
             </h2>
+
+            <div class="caua">
+            <input type="button" value="Reiniciar" id="btnreiniciar" onclick="clickReiniciar()">
+            </div>
+
         </section>
 
-        <section></section>
 
     </main>
+
+    <div class="posicao">
+        <img src="images/segura.png" class="segura">
+        </div>
 
 </body>
 </html>
