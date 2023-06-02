@@ -1,3 +1,9 @@
+
+const intro = document.querySelector('.intro');
+const introMusic = new Audio ('./audio/theme.mp3')
+
+
+
 // Variaveis
 let btn1 = 0;
 let btn2 = 0;
@@ -12,25 +18,54 @@ let controle = 0;
 let jogadas = 0;
 let finalJogo = false;
 
-const img_X = '<img src="images/gokublack.png">';
-const img_O = '<img src="images/majin.png">';
+var visibilidade = true;
+
+let jogador1 = null;
+let jogador2 = null;
+
+const img_1 = '<img src="images/gokublack.png">';
+const img_2 = '<img src="images/majin.png">';
+const img_3 = '<img src="images/frezza.png">';
+const img_4 = '<img src="images/jiren.png">';
+const img_5 = '<img src="images/cell.png">';
+const img_6 = '<img src="images/goku.png">';
+
+let dgb1 = document.getElementById('dgb1');
+let dgb2 = document.getElementById('dgb2');
+let dgb3 = document.getElementById('dgb3');
+let dgb4 = document.getElementById('dgb4');
+let dgb5 = document.getElementById('dgb5');
+let dgb6 = document.getElementById('dgb6');
+
+let sectionPersonagens = document.getElementById('containerPersonagens');
+let sectionTabuleiro = document.getElementById('containerTabuleiro');
+
+sectionTabuleiro.style.display = 'none';
+
+
+intro.addEventListener('click',IniciarPartida)
+
+function IniciarPartida (){
+    introMusic.play()
+}
 
 
 // click botao 1
 
 function clickBtn1() {
 
+    let btn = document.getElementById('btn1');
+
 
     if (btn1 == 0 && !finalJogo) {
         jogadas++;
         if (controle == 0) {
             controle = 1;
-            document.getElementById('btn1').innerHTML = img_X;
+            document.getElementById('btn1').innerHTML = jogador1;
             btn1 = "X";
-
         } else {
             controle = 0;
-            document.getElementById('btn1').innerHTML = img_O;
+            document.getElementById('btn1').innerHTML = jogador2;
             btn1 = "O";
         }
     }
@@ -47,12 +82,12 @@ function clickBtn2() {
         jogadas++;
         if (controle == 0) {
             controle = 1;
-            document.getElementById('btn2').innerHTML = img_X;
+            document.getElementById('btn2').innerHTML = jogador1;
             btn2 = "X";
 
         } else {
             controle = 0;
-            document.getElementById('btn2').innerHTML = img_O;
+            document.getElementById('btn2').innerHTML = jogador2;
             btn2 = "O";
         }
     }
@@ -70,12 +105,12 @@ function clickBtn3() {
         jogadas++;
         if (controle == 0) {
             controle = 1;
-            document.getElementById('btn3').innerHTML = img_X;
+            document.getElementById('btn3').innerHTML = jogador1;
             btn3 = "X";
 
         } else {
             controle = 0;
-            document.getElementById('btn3').innerHTML = img_O;
+            document.getElementById('btn3').innerHTML = jogador2;
             btn3 = "O";
         }
     }
@@ -93,12 +128,12 @@ function clickBtn4() {
         jogadas++;
         if (controle == 0) {
             controle = 1;
-            document.getElementById('btn4').innerHTML = img_X;
+            document.getElementById('btn4').innerHTML = jogador1;
             btn4 = "X";
 
         } else {
             controle = 0;
-            document.getElementById('btn4').innerHTML = img_O;
+            document.getElementById('btn4').innerHTML = jogador2;
             btn4 = "O";
         }
     }
@@ -116,12 +151,12 @@ function clickBtn5() {
         jogadas++;
         if (controle == 0) {
             controle = 1;
-            document.getElementById('btn5').innerHTML = img_X;
+            document.getElementById('btn5').innerHTML = jogador1;
             btn5 = "X";
 
         } else {
             controle = 0;
-            document.getElementById('btn5').innerHTML = img_O;
+            document.getElementById('btn5').innerHTML = jogador2;
             btn5 = "O";
         }
     }
@@ -139,12 +174,12 @@ function clickBtn6() {
         jogadas++;
         if (controle == 0) {
             controle = 1;
-            document.getElementById('btn6').innerHTML = img_X;
+            document.getElementById('btn6').innerHTML = jogador1;
             btn6 = "X";
 
         } else {
             controle = 0;
-            document.getElementById('btn6').innerHTML = img_O;
+            document.getElementById('btn6').innerHTML = jogador2;
             btn6 = "O";
         }
     }
@@ -162,12 +197,12 @@ function clickBtn7() {
         jogadas++;
         if (controle == 0) {
             controle = 1;
-            document.getElementById('btn7').innerHTML = img_X;
+            document.getElementById('btn7').innerHTML = jogador1;
             btn7 = "X";
 
         } else {
             controle = 0;
-            document.getElementById('btn7').innerHTML = img_O;
+            document.getElementById('btn7').innerHTML = jogador2;
             btn7 = "O";
         }
     }
@@ -185,12 +220,12 @@ function clickBtn8() {
         jogadas++;
         if (controle == 0) {
             controle = 1;
-            document.getElementById('btn8').innerHTML = img_X;
+            document.getElementById('btn8').innerHTML = jogador1;
             btn8 = "X";
 
         } else {
             controle = 0;
-            document.getElementById('btn8').innerHTML = img_O;
+            document.getElementById('btn8').innerHTML = jogador2;
             btn8 = "O";
         }
     }
@@ -208,12 +243,12 @@ function clickBtn9() {
         jogadas++;
         if (controle == 0) {
             controle = 1;
-            document.getElementById('btn9').innerHTML = img_X;
+            document.getElementById('btn9').innerHTML = jogador1;
             btn9 = "X";
 
         } else {
             controle = 0;
-            document.getElementById('btn9').innerHTML = img_O;
+            document.getElementById('btn9').innerHTML = jogador2;
             btn9 = "O";
         }
     }
@@ -242,7 +277,7 @@ function verificaGanhador() {
         (btn2 == 'X' && btn5 == 'X' && btn8 == 'X') ||
         (btn3 == 'X' && btn6 == 'X' && btn9 == 'X')) {
         finalJogo = true;
-        lblJogador.innerText = 'O jogador Goku Black ganhou!';
+        lblJogador.innerText = 'O jogador 1 ganhou!';
         lblJogadas.innerText = '';
         return;
 
@@ -261,7 +296,7 @@ function verificaGanhador() {
         (btn2 == 'O' && btn5 == 'O' && btn8 == 'O') ||
         (btn3 == 'O' && btn6 == 'O' && btn9 == 'O')) {
         finalJogo = true;
-        lblJogador.innerText = 'O jogador Majin Boo ganhou!';
+        lblJogador.innerText = 'O jogador 2 ganhou!';
         lblJogadas.innerText = '';
         return;
 
@@ -277,9 +312,9 @@ function verificaGanhador() {
     }
 
     if (controle == 0) {
-        lblJogador.innerText = 'Jogador Goku Black';
+        lblJogador.innerText = 'Jogador 1';
     } else {
-        lblJogador.innerText = 'Jogador Majin Boo';
+        lblJogador.innerText = 'Jogador 2';
     }
 
     lblJogadas.innerText = '(' + (jogadas + 1) + 'ª  Jogada)'
@@ -327,7 +362,49 @@ function clickReiniciar() {
     let lblJogador = document.getElementById('lblJogador');
     let lblJogadas = document.getElementById('lblJogadas');
 
-    lblJogador.innerText = 'Jogador Goku black';
+    lblJogador.innerText = 'Jogador 1';
     lblJogadas.innerText = '(1ª Jogada)';
+
+}
+
+
+function clickDgb(selecionado) {
+    let jogadorSelecionado = null;
+
+    if (selecionado == 'gokublack') {
+        jogadorSelecionado = img_1;
+    } else if (selecionado == 'majin') {
+        jogadorSelecionado = img_2;
+    } else if (selecionado == 'frezza') {
+        jogadorSelecionado = img_3;
+    } else if (selecionado == 'jiren') {
+        jogadorSelecionado = img_4;
+    } else if (selecionado == 'cell') {
+        jogadorSelecionado = img_5;
+    } else if (selecionado =='goku') {
+        jogadorSelecionado = img_6;
+    }
+
+    if (jogadorSelecionado == null) {
+        alert('Erro ao selecionar o personagem');
+        return;
+    }
+
+    let lblOrdemPersonagem = document.getElementById('ordemPersonagem');
+    if (jogador1 == null) {
+        jogador1 = jogadorSelecionado;
+        lblOrdemPersonagem.innerText = '2º'
+    } else {
+        if(jogadorSelecionado == jogador1){
+            alert("O mesmo personagem não pode ser selecionado.");
+            return;
+        }
+        jogador2 = jogadorSelecionado;
+        sectionPersonagens.style.display = 'none'
+        sectionTabuleiro.style.display = 'block';
+        document.getElementById("reiniciar").removeAttribute("hidden");
+    }
+
+    
 
 }

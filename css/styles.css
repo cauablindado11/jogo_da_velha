@@ -1,23 +1,24 @@
-body{
-    background-color: rgb(0, 0, 0);
+body {
+    background-color: black;
 }
 
-h1{
+h1 {
     font-size: 80px;
     color: rgb(165, 165, 165);
-    font-family: inter,sans-serif;
+    font-family: inter, sans-serif;
 }
 
-h2{
+h2 {
     color: rgb(165, 165, 165);
-    font-family: inter,sans-serif;
+    font-family: inter, sans-serif;
     font-size: 20px;
 }
 
-main{
+main {
     text-align: center;
 }
-.tabuleiro div div{
+
+.tabuleiro div div {
     background-color: gray;
     width: 130px;
     height: 130px;
@@ -28,37 +29,56 @@ main{
     cursor: pointer;
 }
 
-img{
-    width: 130px;
-    height: 130px;
+.sele div div {
+    background-color: gray;
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    border: 5px solid rgb(165, 165, 165);
+    border-radius: 20px;
+    font-size: 100px;
+    cursor: pointer;
 }
 
-.linha{
+
+
+.linha {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 150px;
 }
 
-.caua #btnreiniciar{
+.caua #btnreiniciar {
     background-color: rgb(165, 165, 165);
     color: rgb(0, 0, 0);
-    padding: 5px 8px;
+    padding: 5px 12px;
     font-size: 36px;
-    border:5px solid rgb(165, 165, 165);
+    border: 5px solid rgb(165, 165, 165);
 }
 
-hr{
-    border-color: rgb(165, 165, 165); 
-    width: 800px;
-   }
-
-.segura{
-    width: 550px;
-    height: 550px;
+.caua{
+    margin-right: 400px;
 }
 
-.posicao{
-    margin-left: 1000px;
-    margin-top: -680px;
+.linho {
+    display: inline-flex;
+}
+
+img {
+    width: 120px;
+    height: 120px;
+}
+
+#reiniciar{
+    background-color: rgb(165, 165, 165);
+    color: rgb(0, 0, 0);
+    padding: 0px 0px;
+    font-size: 36px;
+    border: 5px solid rgb(165, 165, 165);
+}
+
+.botao{
+    margin-top: -110px;
+    margin-left: 500px;
 }

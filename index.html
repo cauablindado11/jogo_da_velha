@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,67 +8,98 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/styles.css">
-    
-
-    <!-- JS -->
-    <script src="js/script.js"></script>
 
     <!-- ICON -->
     <link rel="icon" href="images/bola.png">
 
     <title>JOGO DA VELHA - DBZ</title>
 </head>
+
 <body>
 
 
-    <main>
+    <section class="tabuleiro">
 
-        <section>
-            <h1>JOGO DA VELHA DBZ</h1>
-        </section>
+        <main class="intro"> 
 
-        <section class="tabuleiro">
-            <div class="linha">
-                <div id="btn1"  onclick="clickBtn1()"></div>
-                <div id="btn2"  onclick="clickBtn2()"></div>
-                <div id="btn3"  onclick="clickBtn3()"></div>
-            </div>
-            <div class="linha"> 
-                <div id="btn4"  onclick="clickBtn4()"></div>
-                <div id="btn5"  onclick="clickBtn5()"></div>
-                <div id="btn6"  onclick="clickBtn6()"></div>
-            </div>
-            <div class="linha">
-                <div id="btn7"  onclick="clickBtn7()"></div>
-                <div id="btn8"  onclick="clickBtn8()"></div>
-                <div id="btn9"  onclick="clickBtn9()"></div>
-            </div>
-        </section>
-        
+            <section>
+                <h1>JOGO DA VELHA DRAGON BALL </h1>
+            </section>
+
+
+            <section id="containerPersonagens" class="containerPersonagens">
+                <h2>Selecione o <span id="ordemPersonagem">1º</span> personagem</h2>
 
                 <br>
                 <br>
 
+                <div class="linho">
+                    <div id="dgb1" onclick="clickDgb('gokublack')"><img src="images/gokublack.png"></div><br><br>
+                    <div id="dgb2" onclick="clickDgb('majin')"><img src="images/majin.png"></div><br><br>
+                    <div id="dgb3" onclick="clickDgb('frezza')"><img src="images/frezza.png"></div><br><br>
+                </div>
 
-        <section>
+                <div class="linho">
+                    <div id="dgb4" onclick="clickDgb('jiren')"><img src="images/jiren.png"></div><br><br>
+                    <div id="dgb5" onclick="clickDgb('cell')"><img src="images/cell.png"></div><br><br>
+                    <div id="dgb6" onclick="clickDgb('goku')"><img src="images/goku.png"></div><br><br>
+                </div>
 
-            <h2>
-                <span id="lblJogador"> Jogador Goku Black </span>
-                <span id="lblJogadas"> (1ª Jogada) </span>
-            </h2>
+            </section>
 
-            <div class="caua">
-            <input type="button" value="Reiniciar" id="btnreiniciar" onclick="clickReiniciar()">
+            <section class="tabuleiro" id="containerTabuleiro">
+                <div class="linha">
+                    <div id="btn1" class="df" onclick="clickBtn1()"></div>
+                    <div id="btn2" class="df" onclick="clickBtn2()"></div>
+                    <div id="btn3" class="df" onclick="clickBtn3()"></div>
+                </div>
+                <div class="linha">
+                    <div id="btn4" class="df" onclick="clickBtn4()"></div>
+                    <div id="btn5" class="df" onclick="clickBtn5()"></div>
+                    <div id="btn6" class="df" onclick="clickBtn6()"></div>
+                </div>
+                <div class="linha">
+                    <div id="btn7" class="df" onclick="clickBtn7()"></div>
+                    <div id="btn8" class="df" onclick="clickBtn8()"></div>
+                    <div id="btn9" class="df" onclick="clickBtn9()"></div>
+                </div>
+
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <section>
+
+                    <h2>
+                        <span id="lblJogador"> Jogador Goku Black </span>
+                        <span id="lblJogadas"> (1ª Jogada) </span>
+                    </h2>
+
+                    <div class="caua">
+                        <input type="button" value="Reiniciar" id="btnreiniciar" onclick="clickReiniciar()">
+                    </div>
+
+                </section>
+            </section>
+
+
+            <br><br><br>
+            <div class="botao">
+                <input type="button" onclick="location.reload()" value="Escolha o Personagem Novamente" id="reiniciar" hidden   >
             </div>
 
-        </section>
+        </main>
+    </section>
 
 
-    </main>
 
-    <div class="posicao">
-        <img src="images/segura.png" class="segura">
-        </div>
 
+
+    <!-- JS -->
+    <script src="js/script.js" defer></script>
 </body>
+
 </html>
